@@ -44,7 +44,7 @@ const app = Vue.createApp({
         },
         onNextClick(imageIndex) {
             this.activeImageIndex++
-            if (this.activeImageIndex < 0 + 1) {
+            if (this.activeImageIndex === 0 ) {
                 this.activeImageIndex = this.slides.lenght - 1;
             }
         }
