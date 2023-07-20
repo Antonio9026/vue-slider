@@ -31,7 +31,7 @@
                 <div class="thumbs">
                     <!-- <div class="prev" @click="onPrevClick(i)"></div>
                     <div class="next"@click="onNextClick(i)"></div> -->
-                    <div class="thumb active" v-for="(imageThumbObj, i) in images" 
+                    <div class="thumb " v-for="(imageThumbObj, i) in images" 
                     @click="onThumbClick(i)">
 
                         <img :src="imageThumbObj" :alt="'immagine#'+ i" />
