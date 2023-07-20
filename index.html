@@ -18,26 +18,28 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item " v-for="(imageObj, i) in images">
-                    <img class="item" v-bind:src="imageObj" v-bind:alt="'immagine#'+ i" />
+                <div class="item " 
+                v-for="(slides, i) in slides"
+                v-bind:class=" activeImageIndex === i ? 'active':''">
+                    <img v-bind:src="slides.image" alt="'img#'+ i" />
                     <div class="text">
-                        <h3>{{ title }}</h3>
+                        <h3>{{ slides.title }}</h3>
                         <p>
-                            {{ text}}
+                            {{ slides.text}}
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <!-- <div class="prev" @click="onPrevClick(i)"></div>
-                    <div class="next"@click="onNextClick(i)"></div> -->
-                    <div class="thumb " v-for="(imageThumbObj, i) in images" 
-                    @click="onThumbClick(i)">
+                    <div class="prev" @click="onPrevClick(imageIndex)"></div>
+                    <div class="next"@click="onNextClick(imageIndex) "></div>
+                    <div class="thumb " v-for="(slides, i) in slides" 
+                    @click="onThumbClick(i)"
+                    v-bind:class=" activeImageIndex === i ? 'active':''">
 
-                        <img :src="imageThumbObj" :alt="'immagine#'+ i" />
+                        <img :src="slides.image" :alt="'immagine#'+ i" />
                     </div>
-                    <div class="prev" ></div>
-                    <div class="next" ></div>
+                   
 
                 </div>
 

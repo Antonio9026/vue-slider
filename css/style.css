@@ -12,13 +12,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .item {
     float: left;
     width: 700px;
     height: 300px;
-    position: relative;
+    position:absolute;
+    opacity: 0;
    
 }
 
@@ -26,12 +28,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* opacity: 0;
-    transition: opacity .7s; */
+    
 }
-.item img .active{
-    opacity: 1;
-}
+
 
 .item .text {
     position: absolute;
@@ -46,6 +45,7 @@
     height: 300px;
     background: #000;
     position: relative;
+ 
 }
 
 .thumb {
@@ -111,4 +111,11 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     bottom: 35%;
     left: 50%;
     transform: translate(-50%) rotate(135deg);
+}
+
+
+
+
+.active{
+    opacity: 1;
 }
