@@ -37,15 +37,23 @@ const app = Vue.createApp({
             // console.log(this.activeImageIndex);
         },
         onPrevClick(imageIndex) {
-            this.activeImageIndex--
-            if (this.activeImageIndex > slides.lenght - 1) {
-                this.activeImageIndex = 0
+            // this.activeImageIndex--
+            // if (this.activeImageIndex > slides.lenght - 1) {
+            //     this.activeImageIndex = 0
+            // }
+            if (this.activeImageIndex == this.slides.length - 1) {
+                this.activeImageIndex = 0;
+        
+            } else {
+                this.activeImageIndex++
             }
         },
         onNextClick(imageIndex) {
-            this.activeImageIndex++
-            if (this.activeImageIndex === 0 ) {
-                this.activeImageIndex = this.slides.lenght - 1;
+          
+            if (this.activeImageIndex === 0) {
+                this.activeImageIndex = this.slides.length - 1
+            } else {
+                this.activeImageIndex--;
             }
         }
     },

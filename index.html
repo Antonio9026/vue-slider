@@ -31,8 +31,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="onPrevClick(imageIndex)"></div>
-                    <div class="next"@click="onNextClick(imageIndex) "></div>
+                    <div class="prev" @click="onNextClick(imageIndex)"></div>
+                    <div class="next"@click="onPrevClick(imageIndex) "></div>
                     <div class="thumb " v-for="(slides, i) in slides" 
                     @click="onThumbClick(i)"
                     v-bind:class=" activeImageIndex === i ? 'active':''">
